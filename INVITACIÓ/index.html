@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="ca">
+
+<head>
+
+    <!-- =========================================================
+         CONFIGURACIÓ BÀSICA DE LA PÀGINA
+         ========================================================= -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pol i Alba · 25.09.2027</title>
+
+
+    <!-- =========================================================
+         TIPOGRAFIES
+         ========================================================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =========================================================
+         FULL CSS PRINCIPAL
+         ========================================================= -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     01 · MÚSICA
+     ========================================================= -->
+
+<audio
+    id="music"
+    src="sortdetu.mp3"
+    autoplay
+    loop
+    muted>
+</audio>
+
+
+<!-- =========================================================
+     02 · PORTADA
+     ========================================================= -->
+
+<section
+    id="portada"
+    class="hero"
+    style="
+        position:fixed;
+        inset:0;
+        z-index:9999;
+        background:#f4efe6;
+    ">
+
+    <!-- BRANCA ESQUERRA -->
+    <img
+        src="branca.png"
+        class="hero-branch hero-branch-left"
+        alt="">
+
+    <!-- BRANCA DRETA -->
+    <img
+        src="branca.png"
+        class="hero-branch hero-branch-right"
+        alt="">
+
+
+    <!-- CONTINGUT CENTRAL -->
+    <div>
+
+        <!-- TEXT SUPERIOR -->
+        <p>ENS CASEM</p>
+
+        <!-- NOMS -->
+        <h1>
+            Pol <i>&</i> Alba
+        </h1>
+
+        <!-- DATA -->
+        <strong>
+            25 · 09 · 2027
+        </strong>
+
+        <!-- LLOC -->
+        <span>
+            LES TALLADES
+        </span>
+
+
+        <!-- =====================================================
+             02.1 · COMPTE ENRERE
+             ===================================================== -->
+
+        <div class="countdown">
+
+            <!-- DIES -->
+            <div class="countdown-days">
+
+                <div id="days">000</div>
+
+                <small>DIES</small>
+
+            </div>
+
+
+            <!-- HORES · MINUTS · SEGONS -->
+            <div class="countdown-time">
+
+                <!-- HORES -->
+                <div>
+                    <b id="hours">00</b>
+                    <small>HORES</small>
+                </div>
+
+                <!-- SEPARADOR -->
+                <em>·</em>
+
+                <!-- MINUTS -->
+                <div>
+                    <b id="minutes">00</b>
+                    <small>MINUTS</small>
+                </div>
+
+                <!-- SEPARADOR -->
+                <em>·</em>
+
+                <!-- SEGONS -->
+                <div>
+                    <b id="seconds">00</b>
+                    <small>SEGONS</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             02.2 · BOTÓ PER ENTRAR A LA WEB
+             ===================================================== -->
+
+        <button
+            id="entra"
+            style="
+                margin-top:50px;
+                padding:16px 32px;
+                background:#29332f;
+                color:#f4efe6;
+                border:none;
+                font-size:14px;
+                letter-spacing:.15em;
+                cursor:pointer;
+            ">
+
+            ENTRA I DESCOBREIX
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     03 · WEB PRINCIPAL
+     ========================================================= -->
+
+<div id="web" style="display:none;">
+
+
+    <!-- =====================================================
+         03.1 · MENÚ PRINCIPAL
+         ===================================================== -->
+
+    <nav class="menu-centered">
+
+        <!-- LOGO ESQUERRA -->
+        <img
+            src="logo.png"
+            alt="Pol & Alba"
+            class="menu-logo">
+
+
+        <!-- ENLLAÇOS DEL MENÚ -->
+        <div class="menu-links">
+
+            <a href="#nosaltres" class="cta">
+                NOSALTRES
+            </a>
+
+            <a href="#dia" class="cta">
+                EL DIA
+            </a>
+
+            <a href="#lloc" class="cta">
+                LLOC
+            </a>
+
+            <a href="#info" class="cta">
+                INFORMACIÓ
+            </a>
+
+            <a href="#regal" class="cta">
+                REGAL
+            </a>
+
+            <a href="#formulari" class="cta">
+                FORMULARI
+            </a>
+
+        </div>
+
+
+        <!-- LOGO DRETA -->
+        <img
+            src="logo.png"
+            alt="Pol & Alba"
+            class="menu-logo">
+
+    </nav>
+
+
+    <!-- =====================================================
+         04 · CONTINGUT PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             04.1 · NOSALTRES
+             ================================================= -->
+
+        <section
+            id="nosaltres"
+            class="section center">
+
+            <p>
+                UNA DATA PER RECORDAR
+            </p>
+
+            <h2>
+                Ens fa molta il·lusió<br>
+                compartir-ho amb tu.
+            </h2>
+
+            <article>
+                Després d'haver viatjat pel món, Egipte, París,
+                Xina, Sri Lanka i Menorca... Hem decidit que ara
+                toca emprendre un altre viatge, ens vam començar
+                a enamorar a Egipte, i avui quatre anys més tard,
+                volem celebrar-ho amb tu.
+            </article>
+
+        </section>
+
+
+        <!-- =================================================
+             04.2 · FOTO
+             ================================================= -->
+
+        <section class="photo">
+
+            <img
+                src="junts.jpg"
+                alt="Pol i Alba"
+                class="photo-img">
+
+        </section>
+
+
+        <!-- =================================================
+             04.3 · EL DIA
+             ================================================= -->
+
+        <section
+            id="dia"
+            class="section">
+
+            <p>EL DIA</p>
+
+            <h2>
+                Tot començarà aquí
+            </h2>
+
+
+            <!-- =================================================
+                 LÍNIA TEMPORAL
+                 ================================================= -->
+
+            <div class="timeline">
+
+
+                <!-- =================================================
+                     15:30 · ARRIBADA
+                     IMATGE ESQUERRA · TEXT DRETA
+                     ================================================= -->
+
+                <div>
+
+                    <img
+                        src="arribada.png"
+                        alt="Arribada">
+
+                    <div>
+
+                        <b>15:30</b>
+
+                        <strong>
+                            Arribada
+                        </strong>
+
+                        <small>
+                            Recepció dels convidats
+                            a l’esplanada de la casa
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     16:00 · COPA DE BENVINGUDA
+                     TEXT ESQUERRA · IMATGE DRETA
+                     ================================================= -->
+
+                <div>
+
+                    <div>
+
+                        <b>16:00</b>
+
+                        <strong>
+                            Copa de benvinguda
+                        </strong>
+
+                        <small>
+                            Abans del gran moment
+                            fem un got
+                        </small>
+
+                    </div>
+
+                    <img
+                        src="copabenvinguda.png"
+                        alt="Copa de benvinguda">
+
+                </div>
+
+
+                <!-- =================================================
+                     17:30 · CERIMÒNIA
+                     IMATGE ESQUERRA · TEXT DRETA
+                     ================================================= -->
+
+                <div>
+
+                    <img
+                        src="cerimonia.png"
+                        alt="Cerimònia">
+
+                    <div>
+
+                        <b>17:30</b>
+
+                        <strong>
+                            Cerimònia
+                        </strong>
+
+                        <small>
+                            El moment que tots
+                            estàvem esperant
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     19:00 · CÒCTEL
+                     TEXT ESQUERRA · IMATGE DRETA
+                     ================================================= -->
+
+                <div>
+
+                    <div>
+
+                        <b>19:00</b>
+
+                        <strong>
+                            Còctel
+                        </strong>
+
+                        <small>
+                            Informal, converses
+                            i bona música
+                        </small>
+
+                    </div>
+
+                    <img
+                        src="coctel.png"
+                        alt="Còctel">
+
+                </div>
+
+
+                <!-- =================================================
+                     22:00 · FESTA
+                     IMATGE ESQUERRA · TEXT DRETA
+                     ================================================= -->
+
+                <div>
+
+                    <img
+                        src="festa.png"
+                        alt="Festa">
+
+                    <div>
+
+                        <b>22:00</b>
+
+                        <strong>
+                            Festa
+                        </strong>
+
+                        <small>
+                            No et puc dir l’hora que acabarem,
+                            només que disfrutarem com nens
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             04.4 · LLOC
+             ================================================= -->
+
+        <section
+            id="lloc"
+            class="section cream">
+
+            <p>EL LLOC</p>
+
+            <h2>
+                Les Tallades
+            </h2>
+
+            <article>
+                Una casa pairal del segle XIV reformada i situada
+                a Vilanova de Sau, a pocs quilòmetres de Vic,
+                enmig del paisatge protagonitzat pels cingles
+                de Tavertet, Guilleries i el pantà de Sau.
+            </article>
+
+
+            <div class="map">
+
+                <img
+                    src="casa.jpg"
+                    alt="Les Tallades"
+                    class="map-photo">
+
+                <b>
+                    LES TALLADES
+                </b>
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Les+Tallades"
+                    target="_blank"
+                    rel="noopener">
+
+                    Com arribar →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             04.5 · INFORMACIÓ
+             ================================================= -->
+
+        <section
+            id="info"
+            class="section">
+
+            <p>INFORMACIÓ</p>
+
+            <h2>
+                Tot el que necessites saber
+            </h2>
+
+
+            <div class="cards">
+
+
+                <!-- CARD 01 · DRESS CODE -->
+
+                <div
+                    tabindex="0" role="button" onclick="document.getElementById('dresscode-banner').style.display='flex'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"
+                    style="cursor:pointer;">
+
+                    <i>01</i>
+
+                    <h3>
+                        Dress code
+                    </h3>
+
+                    <article>
+                        Elegant però còmode.
+                        Volem que gaudeixis de la festa.
+                    </article>
+
+                    <small class="cta">
+                        Veure més →
+                    </small>
+
+                </div>
+
+
+                <!-- CARD 02 · MENÚ -->
+
+                <div
+                    tabindex="0" role="button" onclick="document.getElementById('menu-banner').style.display='flex'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"
+                    style="cursor:pointer;">
+
+                    <i>02</i>
+
+                    <h3>
+                        Menú
+                    </h3>
+
+                    <article>
+                        El menú és sorpresa — volem que sigui
+                        part de la màgia del dia!
+                        <br>
+                        Això sí, respectarem totes les
+                        intoleràncies i preferències que ens
+                        feu saber.
+                    </article>
+
+                    <small class="cta">
+                        Veure més →
+                    </small>
+
+                </div>
+
+
+                <!-- CARD 03 · ALLOTJAMENT -->
+
+                <div
+                    tabindex="0" role="button" onclick="document.getElementById('allotjament-banner').style.display='flex'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"
+                    style="cursor:pointer;">
+
+                    <i>03</i>
+
+                    <h3>
+                        Allotjament
+                    </h3>
+
+                    <article>
+                        Habitacions disponibles
+                        per quedar-vos a dormir.
+                    </article>
+
+                    <small class="cta">
+                        Veure més →
+                    </small>
+
+                </div>
+
+
+                <!-- CARD 04 · MÚSICA -->
+
+                <div
+                    tabindex="0" role="button" onclick="document.getElementById('musica-banner').style.display='flex'" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"
+                    style="cursor:pointer;">
+
+                    <i>04</i>
+
+                    <h3>
+                        Música
+                    </h3>
+
+                    <article>
+                        Digue'ns quina cançó no pot faltar
+                    </article>
+
+                    <small class="cta">
+                        Veure més →
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             04.6 · REGAL
+             ================================================= -->
+
+        <section
+            id="regal"
+            class="section center">
+
+            <p>
+                EL REGAL
+            </p>
+
+            <h2>
+                El millor regal
+            </h2>
+
+            <article>
+                El millor regal és que estigueu amb nosaltres.
+                <br>
+                Si tot i així voleu fer-nos un detall,
+                una aportació —ja sigui en mà o per
+                transferència— ens ajudarà a fer realitat
+                aquest dia tan especial.
+            </article>
+
+
+            <div class="gift-box">
+
+                <b>
+                    Compte bancari
+                </b>
+
+                <span id="iban">
+                    ES81 0073 0100 5102 2551 1344
+                </span>
+
+                <small>
+                    (Podeu copiar-lo fent clic)
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             04.7 · FORMULARI
+             ================================================= -->
+
+        <section
+            id="formulari"
+            class="formulari">
+
+            <p>
+                FORMULARI
+            </p>
+
+            <h2>
+                Vindràs a celebrar-ho<br>
+                amb nosaltres?
+            </h2>
+
+            <article>
+                Confirma la teva assistència
+                i explica'ns tot el que necessitem saber.
+            </article>
+
+
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSd4Zfxvkf8sUnTItUqIhKSoAEAxW_-Cbwmvi4Th5A-GoN-Whg/viewform?usp=header"
+                target="_blank"
+                rel="noopener">
+
+                CONFIRMAR ASSISTÈNCIA
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         05 · BANNERS / FINESTRES EMERGENTS
+         ========================================================= -->
+
+
+    <!-- =====================================================
+         05.1 · BANNER DRESS CODE
+         ===================================================== -->
+
+    <div
+        id="dresscode-banner"
+        class="overlay">
+
+        <div class="overlay-content">
+
+            <img
+                src="dresscode.jpg"
+                alt="Dress code"
+                class="overlay-photo">
+
+            <h2>
+                Dress code
+            </h2>
+
+            <p>
+                Hem pensat un estil elegant però còmode,
+                amb tons naturals i un toc festiu.
+                No cal etiqueta estricta — volem que us
+                sentiu bé i que pugueu gaudir de la festa
+                amb total llibertat.
+            </p>
+
+            <button
+                id="close-dresscode"
+                class="overlay-close">
+
+                Tancar
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         05.2 · BANNER MENÚ
+         ===================================================== -->
+
+    <div
+        id="menu-banner"
+        class="overlay">
+
+        <div class="overlay-content">
+
+            <img
+                src="menu.jpeg"
+                alt="Menú"
+                class="overlay-photo">
+
+            <h2>
+                Menú
+            </h2>
+
+            <p>
+                El menú serà sorpresa, pensat especialment
+                per aquest dia.
+                Hem preparat una proposta que combina
+                tradició i creativitat, perquè pugueu gaudir
+                d’una experiència única.
+            </p>
+
+            <p>
+                Respectarem totes les intoleràncies,
+                al·lèrgies i preferències alimentàries
+                que ens indiqueu al formulari de confirmació.
+            </p>
+
+            <button
+                id="close-menu"
+                class="overlay-close">
+
+                Tancar
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         05.3 · BANNER ALLOTJAMENT
+         ===================================================== -->
+
+    <div
+        id="allotjament-banner"
+        class="overlay">
+
+        <div class="overlay-content">
+
+            <img
+                src="allotjament.jpg"
+                alt="Allotjament"
+                class="overlay-photo">
+
+            <h2>
+                Allotjament
+            </h2>
+
+            <p>
+                Com que sabem que us agrada la festa i
+                no volem patir, us donem la opció de
+                quedar-vos a dormir per poder veure sortir
+                el sol.
+
+                Per aquest motiu, la casa disposa de
+                diferents habitacions amb lliteres.
+            </p>
+
+            <p>
+                <strong>
+                    35€ p/p amb esmorzar inclòs*
+                </strong>
+            </p>
+
+            <p style="font-size:13px; color:#7a847e;">
+                *En cas que et vulguis quedar a dormir,
+                indica-ho al formulari que trobaràs
+                més endavant.
+            </p>
+
+            <button
+                id="close-allotjament"
+                class="overlay-close">
+
+                Tancar
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         05.4 · BANNER MÚSICA
+         ===================================================== -->
+
+    <div
+        id="musica-banner"
+        class="overlay">
+
+        <div class="overlay-content">
+
+            <img
+                src="musica.jpg"
+                alt="Música"
+                class="overlay-photo">
+
+            <h2>
+                Música
+            </h2>
+
+            <p style="margin-top:20px;">
+
+                Ja tenim confirmat el
+                <strong>Paquito el Chocolatero</strong>,
+                el <strong>Flying Free</strong>,
+                el <strong>Mamma Mia</strong>
+                i algun clàssic més.
+
+                <br><br>
+
+                Ara ens falta el més difícil:
+                <strong>les cançons rares</strong>
+                que només tu tens guardades a Spotify.
+
+                Aquelles que quan sonen dius
+                “buah, aquesta és la meva!”
+                i ningú més sap què està passant.
+
+            </p>
+
+            <button
+                id="close-musica"
+                class="overlay-close">
+
+                Tancar
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         06 · FOOTER
+         ========================================================= -->
+
+    <footer class="footer">
+
+        <img
+            src="logo.png"
+            alt="Logo">
+
+        <span>
+            Pol & Alba · 25.09.2027
+        </span>
+
+        <img
+            src="logo.png"
+            alt="Logo">
+
+    </footer>
+
+
+</div>
+<!-- FI DE #WEB -->
+
+
+<!-- =========================================================
+     07 · JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   07.1 · COMPTE ENRERE
+   ========================================================= */
+
+const dataBoda = new Date("2027-09-25T17:30:00");
+
+
+function actualitzarCompteEnrere() {
+
+    const ara = new Date();
+
+    let diferencia = dataBoda - ara;
+
+
+    // SI LA DATA JA HA ARRIBAT
+    if (diferencia <= 0) {
+
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+    }
+
+
+    // CALCULAR DIES
+    const dies = Math.floor(
+        diferencia / (1000 * 60 * 60 * 24)
+    );
+
+    diferencia -=
+        dies * (1000 * 60 * 60 * 24);
+
+
+    // CALCULAR HORES
+    const hores = Math.floor(
+        diferencia / (1000 * 60 * 60)
+    );
+
+    diferencia -=
+        hores * (1000 * 60 * 60);
+
+
+    // CALCULAR MINUTS
+    const minuts = Math.floor(
+        diferencia / (1000 * 60)
+    );
+
+    diferencia -=
+        minuts * (1000 * 60);
+
+
+    // CALCULAR SEGONS
+    const segons = Math.floor(
+        diferencia / 1000
+    );
+
+
+    // MOSTRAR RESULTATS
+    document.getElementById("days").textContent = dies;
+
+    document.getElementById("hours").textContent =
+        String(hores).padStart(2, "0");
+
+    document.getElementById("minutes").textContent =
+        String(minuts).padStart(2, "0");
+
+    document.getElementById("seconds").textContent =
+        String(segons).padStart(2, "0");
+}
+
+
+// ACTUALITZAR EN CARREGAR
+actualitzarCompteEnrere();
+
+// ACTUALITZAR CADA SEGON
+setInterval(actualitzarCompteEnrere, 1000);
+
+
+
+/* =========================================================
+   07.2 · BOTÓ "ENTRA I DESCOBREIX"
+   ========================================================= */
+
+document.getElementById("entra").onclick = () => {
+
+    // AMAGAR PORTADA
+    document.getElementById("portada").style.display = "none";
+
+    // MOSTRAR WEB
+    document.getElementById("web").style.display = "block";
+
+    // ACTIVAR MÚSICA
+    const audio =
+        document.getElementById("music");
+
+    audio.muted = false;
+    audio.volume = 0.6;
+
+};
+
+
+
+/* =========================================================
+   07.3 · COPIAR IBAN
+   ========================================================= */
+
+const iban =
+    "ES81 0073 0100 5102 2551 1344";
+
+
+document
+    .getElementById("iban")
+    .addEventListener("click", () => {
+
+        const fallback =
+            "No s'ha pogut copiar. Copia-ho manualment: " + iban;
+
+        if (navigator.clipboard && window.isSecureContext) {
+
+            navigator.clipboard.writeText(iban)
+                .then(() => alert("Número de compte copiat!"))
+                .catch(() => alert(fallback));
+
+        } else {
+
+            alert(fallback);
+
+        }
+
+    });
+
+
+
+/* =========================================================
+   07.4 · TANCAR BANNER DRESS CODE
+   ========================================================= */
+
+document
+    .getElementById("close-dresscode")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("dresscode-banner")
+            .style.display = "none";
+
+    });
+
+
+
+/* =========================================================
+   07.5 · TANCAR BANNER MENÚ
+   ========================================================= */
+
+document
+    .getElementById("close-menu")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("menu-banner")
+            .style.display = "none";
+
+    });
+
+
+
+/* =========================================================
+   07.6 · TANCAR BANNER ALLOTJAMENT
+   ========================================================= */
+
+document
+    .getElementById("close-allotjament")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("allotjament-banner")
+            .style.display = "none";
+
+    });
+
+
+
+/* =========================================================
+   07.7 · TANCAR BANNER MÚSICA
+   ========================================================= */
+
+document
+    .getElementById("close-musica")
+    .addEventListener("click", () => {
+
+        document
+            .getElementById("musica-banner")
+            .style.display = "none";
+
+    });
+
+
+
+/* =========================================================
+   07.8 · COLOR DEL MENÚ SEGONS LA SECCIÓ
+   ========================================================= */
+
+const menu =
+    document.querySelector(".menu-centered");
+
+
+const sections =
+    document.querySelectorAll(
+        "#nosaltres, #dia, #lloc, #info, #regal, #formulari"
+    );
+
+
+function actualitzarColorMenu() {
+
+    const menuY =
+        menu.getBoundingClientRect().top +
+        (menu.offsetHeight / 2);
+
+
+    sections.forEach(section => {
+
+        const rect =
+            section.getBoundingClientRect();
+
+
+        if (
+            menuY >= rect.top &&
+            menuY <= rect.bottom
+        ) {
+
+            const color =
+                getComputedStyle(section)
+                    .backgroundColor;
+
+
+            menu.style.setProperty(
+                "--menu-bg",
+                color
+            );
+
+        }
+
+    });
+
+}
+
+
+// ACTUALITZAR QUAN FEM SCROLL
+window.addEventListener(
+    "scroll",
+    actualitzarColorMenu
+);
+
+
+// ACTUALITZAR QUAN CARREGA LA PÀGINA
+window.addEventListener(
+    "load",
+    actualitzarColorMenu
+);
+
+
+// ACTUALITZAR QUAN CANVIA LA MIDA
+window.addEventListener(
+    "resize",
+    actualitzarColorMenu
+);
+
+
+
+/* =========================================================
+   07.9 · PAUSAR MÚSICA QUAN SORTIM DE LA PÀGINA
+   ========================================================= */
+
+document.addEventListener(
+    "visibilitychange",
+    () => {
+
+        const audio =
+            document.getElementById("music");
+
+
+        // SI LA PÀGINA QUEDA EN SEGON PLA
+        if (document.hidden) {
+
+            audio.pause();
+
+        }
+
+        // SI TORNEM A LA PÀGINA
+        else {
+
+            audio.play().catch(() => {});
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   07.10 · PAUSAR MÚSICA EN TANCAR LA PÀGINA
+   ========================================================= */
+
+window.addEventListener(
+    "pagehide",
+    () => {
+
+        const audio =
+            document.getElementById("music");
+
+        audio.pause();
+
+    }
+);
+
+
+
+/* =========================================================
+   07.11 · ACTIVAR EL SO AMB LA PRIMERA INTERACCIÓ
+   ========================================================= */
+
+function activateSound() {
+
+    const audio =
+        document.getElementById("music");
+
+
+    // ACTIVAR SO
+    audio.muted = false;
+
+    // VOLUM
+    audio.volume = 0.6;
+
+
+    // JA NO CAL CONTINUAR ESCOLTANT CLICS
+    document.removeEventListener(
+        "click",
+        activateSound
+    );
+
+    document.removeEventListener(
+        "scroll",
+        activateSound
+    );
+
+}
+
+
+// ACTIVAR SO AMB UN CLIC
+document.addEventListener(
+    "click",
+    activateSound
+);
+
+
+// ACTIVAR SO AMB SCROLL
+document.addEventListener(
+    "scroll",
+    activateSound
+);
+
+
+
+/* =========================================================
+   07.12 · TANCAR BANNERS AMB ESC O CLICANT FORA
+   ========================================================= */
+
+document.querySelectorAll(".overlay").forEach(overlay => {
+
+    overlay.addEventListener("click", e => {
+        if (e.target === overlay) {
+            overlay.style.display = "none";
+        }
+    });
+
+});
+
+document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+        document.querySelectorAll(".overlay").forEach(overlay => {
+            overlay.style.display = "none";
+        });
+    }
+});
+
+</script>
+
+
+</body>
+</html>

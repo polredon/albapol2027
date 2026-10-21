@@ -1,0 +1,1333 @@
+/* =========================================================
+   POL & ALBA — WEB DE CASAMENT
+   ESTILS PRINCIPALS
+   ========================================================= */
+
+
+/* =========================================================
+   01. VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* -----------------------------------------------------
+       TIPOGRAFIES
+       ----------------------------------------------------- */
+
+    --font-titol: "Cormorant Garamond", serif;
+    --font-text: "DM Sans", sans-serif;
+
+
+    /* -----------------------------------------------------
+       COLORS
+       ----------------------------------------------------- */
+
+    --color-fons: #f4efe6;
+    --color-fons-crema: #fbf8f2;
+    --color-text: #29332f;
+    --color-text-suau: #6b746e;
+    --color-text-verd: #687562;
+    --color-daurat: #F2C200;
+    --color-linia: #d8d1c4;
+
+
+    /* -----------------------------------------------------
+       PORTADA
+       ----------------------------------------------------- */
+
+    --size-hero-enscasem: 14px;
+    --size-hero-titol: clamp(90px, 14vw, 170px);
+    --size-hero-data: 32px;
+    --size-hero-lloc: 20px;
+    --size-hero-dies: 90px;
+    --size-hero-dies-label: 12px;
+    --size-hero-temps: 48px;
+    --size-hero-temps-label: 12px;
+    --size-hero-separador: 32px;
+    --size-hero-boto: 16px;
+
+
+    /* -----------------------------------------------------
+       MENÚ
+       ----------------------------------------------------- */
+
+    --size-menu: 20px;
+
+
+    /* -----------------------------------------------------
+       SECCIONS
+       ----------------------------------------------------- */
+
+    --size-section-intro: 18px;
+    --size-section-titol: clamp(55px, 8vw, 86px);
+    --size-section-text: 18px;
+
+
+    /* -----------------------------------------------------
+       TIMELINE
+       ----------------------------------------------------- */
+
+    --size-timeline-hora: 40px;
+    --size-timeline-titol: 20px;
+    --size-timeline-text: 16px;
+
+
+    /* -----------------------------------------------------
+       TARGETES
+       ----------------------------------------------------- */
+
+    --size-card-label: 10px;
+    --size-card-titol: 38px;
+    --size-card-text: 16px;
+    --size-card-cta: 13px;
+
+
+    /* -----------------------------------------------------
+       MAPA
+       ----------------------------------------------------- */
+
+    --size-map-titol: 38px;
+    --size-map-enllac: 14px;
+
+
+    /* -----------------------------------------------------
+       REGAL
+       ----------------------------------------------------- */
+
+    --size-regal-titol: 26px;
+    --size-regal-text: 18px;
+    --size-regal-nota: 14px;
+
+
+    /* -----------------------------------------------------
+       FORMULARI
+       ----------------------------------------------------- */
+
+    --size-form-titol: clamp(48px, 7vw, 78px);
+    --size-form-text: 16px;
+    --size-form-boto: 14px;
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    --size-footer: 10px;
+
+
+    /* -----------------------------------------------------
+       FINESTRES
+       ----------------------------------------------------- */
+
+    --size-overlay-titol: 42px;
+    --size-overlay-text: 16px;
+    --size-overlay-boto: 12px;
+
+
+    /* -----------------------------------------------------
+       INTERLINEAT
+       ----------------------------------------------------- */
+
+    --line-height-text: 1.8;
+    --line-height-overlay: 1.7;
+
+
+    /* -----------------------------------------------------
+       FOTO
+       ----------------------------------------------------- */
+
+    --photo-marge-superior: 0px;
+    --photo-marge-lateral: 30px;
+    --photo-borde: 12px;
+    --photo-proporcio: 16 / 9;
+}
+
+
+/* =========================================================
+   02. RESET I BASE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    background: var(--color-fons);
+    color: var(--color-text);
+    font-family: var(--font-text);
+}
+
+
+/* =========================================================
+   03. PORTADA
+   ========================================================= */
+
+.hero {
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #fbf8f2, #f4efe6 65%);
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   BRANQUES DE LA PORTADA
+   --------------------------------------------------------- */
+
+.hero-branch {
+    position: absolute;
+    top: 50%;
+    width: 380px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-branch-left {
+    left: 25%;
+    transform: translateY(-50%);
+}
+
+.hero-branch-right {
+    right: 25%;
+    transform: translateY(-50%) scaleX(-1);
+}
+
+
+/* ---------------------------------------------------------
+   CONTINGUT DE LA PORTADA
+   --------------------------------------------------------- */
+
+.hero > div {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 420px;
+}
+
+.hero p {
+    font-family: var(--font-text);
+    font-size: var(--size-hero-enscasem);
+    letter-spacing: .32em;
+    color: var(--color-text-verd);
+}
+
+.hero h1 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: none;
+    font-family: var(--font-titol);
+    font-size: var(--size-hero-titol);
+    font-weight: 500;
+    line-height: .85;
+    letter-spacing: -.06em;
+    margin: 25px 0 35px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.hero strong {
+    display: block;
+    font-family: var(--font-text);
+    font-size: var(--size-hero-data);
+    font-weight: 500;
+    letter-spacing: .18em;
+}
+
+.hero span {
+    display: block;
+    font-family: var(--font-text);
+    font-size: var(--size-hero-lloc);
+    letter-spacing: .22em;
+    margin: 12px;
+}
+
+#entra {
+    font-family: var(--font-text);
+    font-size: var(--size-hero-boto);
+    padding: 20px 40px;
+    background: var(--color-text);
+    color: var(--color-fons);
+    border: none;
+    border-radius: 50px;
+    letter-spacing: .18em;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   04. COUNTDOWN
+   ========================================================= */
+
+.countdown {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.countdown-days div {
+    font-family: var(--font-titol);
+    font-size: var(--size-hero-dies);
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1;
+}
+
+.countdown-days small {
+    display: block;
+    margin-top: 20px;
+    font-family: var(--font-text);
+    font-size: var(--size-hero-dies-label);
+    letter-spacing: .25em;
+    color: var(--color-text-verd);
+}
+
+.countdown-time {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.countdown-time b {
+    font-family: var(--font-titol);
+    font-size: var(--size-hero-temps);
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 1;
+}
+
+.countdown-time small {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--font-text);
+    font-size: var(--size-hero-temps-label);
+    letter-spacing: .25em;
+    color: var(--color-text-verd);
+}
+
+.countdown-time em {
+    font-family: var(--font-titol);
+    font-style: normal;
+    font-size: var(--size-hero-separador);
+    color: var(--color-text-verd);
+    opacity: .6;
+}
+
+
+/* =========================================================
+   05. MENÚ
+   ========================================================= */
+
+.menu-centered {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 12px 30px;
+    background: var(--menu-bg, var(--color-fons));
+    font-family: var(--font-text);
+    letter-spacing: .03em;
+    transition: background-color .3s ease;
+}
+
+.menu-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.menu-logo:first-child {
+    justify-self: start;
+}
+
+.menu-logo:last-child {
+    justify-self: end;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    padding: 10px 18px;
+    background: var(--color-text);
+    color: var(--color-fons);
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-text);
+    font-size: 14px;
+    letter-spacing: .08em;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.menu-links a:hover {
+    background: #34413b;
+}
+
+
+/* =========================================================
+   06. SECCIONS
+   ========================================================= */
+
+.section {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 130px 30px;
+}
+
+.section > p,
+.section > h2,
+.section > article,
+.section > .timeline,
+.section > .cards,
+.section > .map,
+.section > .gift-box {
+    width: 100%;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section > h2 {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.center > p,
+.center > h2,
+.center > article,
+.center > .gift-box {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   FONS DE CADA SECCIÓ
+   --------------------------------------------------------- */
+
+#nosaltres {
+    background: var(--color-fons);
+}
+
+#dia {
+    background: var(--color-fons-crema);
+}
+
+#lloc {
+    background: var(--color-fons);
+}
+
+#info {
+    background: var(--color-fons-crema);
+}
+
+#regal {
+    background: var(--color-fons);
+}
+
+
+/* ---------------------------------------------------------
+   TEXT DE LES SECCIONS
+   --------------------------------------------------------- */
+
+.section p {
+    font-family: var(--font-text);
+    font-size: var(--size-section-intro);
+    letter-spacing: .3em;
+    color: var(--color-text-verd);
+    text-align: center;
+}
+
+.section h2 {
+    font-family: var(--font-titol);
+    font-size: var(--size-section-titol);
+    font-weight: 500;
+    line-height: .92;
+    letter-spacing: -.04em;
+    margin: 0 0 28px;
+    text-align: center;
+}
+
+.section article {
+    font-family: var(--font-text);
+    font-size: var(--size-section-text);
+    color: var(--color-text-suau);
+    line-height: var(--line-height-text);
+}
+
+#lloc article {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+/* =========================================================
+   07. FOTO
+   ========================================================= */
+
+.photo {
+    margin:
+        var(--photo-marge-superior)
+        var(--photo-marge-lateral)
+        0;
+    height: auto;
+    min-height: unset;
+    aspect-ratio: var(--photo-proporcio);
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #d9d3c7, #eee9df);
+    border: var(--photo-borde) solid var(--color-fons);
+    outline: 1px solid #fbf8f2;
+    overflow: hidden;
+}
+
+.photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================================================
+   08. TIMELINE
+   ========================================================= */
+
+.timeline {
+    border-top: 1px solid var(--color-linia);
+    margin: 60px 0 20px;
+}
+
+.timeline > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--color-linia);
+}
+
+.timeline > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    border: none;
+}
+
+/* Escriptori: mateixa estructura que al mòbil, però més grans */
+@media (min-width: 651px) {
+
+    /* 1r, 3r, 5è... imatge esquerra, text dreta */
+    .timeline > div:nth-child(odd) {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .timeline > div:nth-child(odd) > img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .timeline > div:nth-child(odd) > div {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* 2n, 4t, 6è... text esquerra, imatge dreta */
+    .timeline > div:nth-child(even) {
+        grid-template-columns: 1fr 200px;
+    }
+
+    .timeline > div:nth-child(even) > div {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .timeline > div:nth-child(even) > img {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* Mida de les imatges: es veuen senceres, sense retallar */
+    .timeline > div > img {
+        width: 200px;
+        height: 250px;
+        object-fit: contain;
+        display: block;
+    }
+
+}
+
+.timeline b {
+    font-family: var(--font-titol);
+    font-size: var(--size-timeline-hora);
+    font-weight: 500;
+}
+
+.timeline strong {
+    display: block;
+    font-family: var(--font-text);
+    font-size: var(--size-timeline-titol);
+}
+
+.timeline small {
+    display: block;
+    font-family: var(--font-text);
+    font-size: var(--size-timeline-text);
+    color: var(--color-text-suau);
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   09. FONS CREMA
+   ========================================================= */
+
+.cream {
+    background: var(--color-fons-crema);
+}
+
+
+/* =========================================================
+   10. TARGETES INFO
+   ========================================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--color-linia);
+}
+
+.cards div {
+    background: var(--color-fons-crema);
+    padding: 40px 35px;
+    height: 320px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.cards i {
+    font-family: var(--font-text);
+    font-size: var(--size-card-label);
+    letter-spacing: .2em;
+    color: var(--color-text-verd);
+}
+
+.cards h3 {
+    font-family: var(--font-titol);
+    font-size: var(--size-card-titol);
+    font-weight: 500;
+    margin: 35px 0 10px;
+}
+
+.cards p {
+    font-family: var(--font-text);
+    font-size: var(--size-card-text);
+}
+
+.cards div .cta {
+    display: block;
+    margin-top: 18px;
+    font-family: var(--font-text);
+    font-size: var(--size-card-cta);
+    letter-spacing: .05em;
+    color: var(--color-text);
+    opacity: .55;
+    transition: opacity .2s ease;
+}
+
+.cards div[onclick] {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.cards div[onclick]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+}
+
+.cards div[onclick]:hover .cta {
+    opacity: .9;
+}
+
+
+/* =========================================================
+   11. MAPA / LLOC
+   ========================================================= */
+
+.map {
+    height: auto;
+    margin-top: 50px;
+    background: transparent;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 0;
+}
+
+.map-photo {
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+
+.map b {
+    font-family: var(--font-titol);
+    font-size: var(--size-map-titol);
+    font-weight: 500;
+}
+
+.map a {
+    font-family: var(--font-text);
+    font-size: var(--size-map-enllac);
+    color: var(--color-text);
+}
+
+
+/* =========================================================
+   12. REGAL
+   ========================================================= */
+
+.gift-box {
+    margin: 40px auto 0;
+    padding: 30px;
+    max-width: 420px;
+    text-align: center;
+    background: #f7f4ee;
+    border: 1px solid #e2ddd3;
+    border-radius: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+}
+
+.gift-box b {
+    display: block;
+    font-family: var(--font-titol);
+    font-size: var(--size-regal-titol);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.gift-box span {
+    display: block;
+    font-family: var(--font-text);
+    font-size: var(--size-regal-text);
+    letter-spacing: .03em;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.gift-box small {
+    display: block;
+    margin-top: 12px;
+    font-family: var(--font-text);
+    font-size: var(--size-regal-nota);
+    letter-spacing: .2em;
+    color: #7d887f;
+}
+
+
+/* =========================================================
+   13. FORMULARI
+   ========================================================= */
+
+.formulari {
+    text-align: center;
+    padding: 150px 30px;
+    background: var(--color-text);
+    color: var(--color-fons);
+}
+
+.formulari p {
+    font-family: var(--font-text);
+    font-size: var(--size-form-text);
+    color: #b9c0b6;
+}
+
+.formulari h2 {
+    font-family: var(--font-titol);
+    font-size: var(--size-form-titol);
+    font-weight: 500;
+    line-height: .92;
+}
+
+.formulari article {
+    max-width: 500px;
+    margin: 0 auto 35px;
+    font-family: var(--font-text);
+    font-size: var(--size-form-text);
+    color: #c7ccc5;
+}
+
+.formulari a {
+    display: inline-block;
+    background: var(--color-fons);
+    color: var(--color-text);
+    padding: 18px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-text);
+    font-size: var(--size-form-boto);
+    letter-spacing: .18em;
+}
+
+
+/* =========================================================
+   14. FOOTER
+   ========================================================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-family: var(--font-text);
+    font-size: var(--size-footer);
+    letter-spacing: .15em;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   15. OVERLAY / FINESTRES
+   ========================================================= */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    z-index: 9999;
+}
+
+.overlay-content {
+    background: var(--color-fons);
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .25);
+    animation: fadeIn .3s ease;
+}
+
+.overlay-photo {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.overlay-content h2 {
+    font-family: var(--font-titol);
+    font-size: var(--size-overlay-titol);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.overlay-content p {
+    font-family: var(--font-text);
+    font-size: var(--size-overlay-text);
+    color: var(--color-text-suau);
+    line-height: var(--line-height-overlay);
+    margin-bottom: 25px;
+}
+
+#close-dresscode,
+#close-menu,
+.overlay-close {
+    background: var(--color-text);
+    color: var(--color-fons);
+    border: none;
+    padding: 12px 22px;
+    font-family: var(--font-text);
+    font-size: var(--size-overlay-boto);
+    letter-spacing: .15em;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   16. ANIMACIÓ
+   ========================================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   17. MÒBIL
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* =====================================================
+       VARIABLES — MÒBIL
+       ===================================================== */
+
+    :root {
+
+        /* -------------------------------------------------
+           PORTADA
+           ------------------------------------------------- */
+
+        --size-hero-enscasem: 14px;
+        --size-hero-titol: clamp(65px, 18vw, 110px);
+        --size-hero-data: 26px;
+        --size-hero-lloc: 16px;
+        --size-hero-dies: 70px;
+        --size-hero-dies-label: 11px;
+        --size-hero-temps: 38px;
+        --size-hero-temps-label: 10px;
+        --size-hero-separador: 26px;
+        --size-hero-boto: 14px;
+
+
+        /* -------------------------------------------------
+           MENÚ
+           ------------------------------------------------- */
+
+        --size-menu: 16px;
+
+
+        /* -------------------------------------------------
+           SECCIONS
+           ------------------------------------------------- */
+
+        --size-section-intro: 12px;
+        --size-section-titol: clamp(45px, 10vw, 65px);
+        --size-section-text: 18px;
+
+
+        /* -------------------------------------------------
+           TIMELINE
+           ------------------------------------------------- */
+
+        --size-timeline-hora: 30px;
+        --size-timeline-titol: 20px;
+        --size-timeline-text: 18px;
+
+
+        /* -------------------------------------------------
+           TARGETES
+           ------------------------------------------------- */
+
+        --size-card-label: 13px;
+        --size-card-titol: 32px;
+        --size-card-text: 15px;
+        --size-card-cta: 13px;
+
+
+        /* -------------------------------------------------
+           MAPA
+           ------------------------------------------------- */
+
+        --size-map-titol: 32px;
+        --size-map-enllac: 13px;
+
+
+        /* -------------------------------------------------
+           REGAL
+           ------------------------------------------------- */
+
+        --size-regal-titol: 24px;
+        --size-regal-text: 16px;
+        --size-regal-nota: 9px;
+
+
+        /* -------------------------------------------------
+           FORMULARI
+           ------------------------------------------------- */
+
+        --size-form-titol: clamp(42px, 10vw, 65px);
+        --size-form-text: 18px;
+        --size-form-boto: 10px;
+
+
+        /* -------------------------------------------------
+           FOOTER
+           ------------------------------------------------- */
+
+        --size-footer: 13px;
+
+
+        /* -------------------------------------------------
+           OVERLAY
+           ------------------------------------------------- */
+
+        --size-overlay-titol: 32px;
+        --size-overlay-text: 15px;
+        --size-overlay-boto: 14px;
+    }
+
+
+    /* =====================================================
+       BRANQUES — MÒBIL
+       ===================================================== */
+
+    .hero-branch {
+        position: absolute;
+        width: 220px;
+        max-width: none;
+        top: 52%;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .hero-branch-left {
+        left: -5px;
+        transform: translateY(-50%);
+    }
+
+    .hero-branch-right {
+        right: -5px;
+        transform: translateY(-50%) scaleX(-1);
+    }
+
+
+    /* =====================================================
+       MENÚ — MÒBIL
+       ===================================================== */
+
+    .menu-centered {
+        display: grid;
+        grid-template-columns: 32px 1fr 32px;
+        gap: 6px;
+        padding: 10px 8px;
+    }
+
+    .menu-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .menu-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+
+    .menu-links a {
+        width: 100%;
+        min-width: 0;
+        padding: 9px 3px;
+        font-size: 10px;
+        letter-spacing: .03em;
+    }
+
+
+    /* =====================================================
+       PORTADA — MÒBIL
+       ===================================================== */
+
+
+    /* =====================================================
+       SECCIONS — MÒBIL
+       ===================================================== */
+
+    .section {
+        padding: 90px 22px;
+    }
+
+
+    /* =====================================================
+       FOTO — MÒBIL
+       ===================================================== */
+
+    .photo {
+        margin: 0 15px 70px;
+        height: auto;
+        aspect-ratio: auto;
+        overflow: hidden;
+    }
+
+    .photo-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+
+ /* =====================================================
+    TIMELINE — MÒBIL
+    ===================================================== */
+
+.timeline {
+    margin: 35px 0 10px;
+    border-top: none;
+}
+
+/* Cada horari */
+.timeline > div {
+    display: grid;
+    align-items: center;
+    gap: 18px;
+    padding: 15px 0;
+    border-bottom: none;
+}
+
+/* Contenidor del text */
+.timeline > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    border: none;
+}
+
+/* Hora */
+.timeline b {
+    font-size: var(--size-timeline-hora);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+/* Títol */
+.timeline strong {
+    font-size: var(--size-timeline-titol);
+    line-height: 1.2;
+}
+
+/* Descripció */
+.timeline small {
+    font-size: var(--size-timeline-text);
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+/* -----------------------------------------------------
+   IMATGES
+   Mateixa caixa per a totes
+   ----------------------------------------------------- */
+
+.timeline img {
+    width: 110px;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+}
+
+/* -----------------------------------------------------
+   1r, 3r, 5è...
+   IMATGE ESQUERRA — TEXT DRETA
+   ----------------------------------------------------- */
+
+.timeline > div:nth-child(odd) {
+    grid-template-columns: 110px 1fr;
+}
+
+.timeline > div:nth-child(odd) > img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.timeline > div:nth-child(odd) > div {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/* -----------------------------------------------------
+   2n, 4t, 6è...
+   TEXT ESQUERRA — IMATGE DRETA
+   ----------------------------------------------------- */
+
+.timeline > div:nth-child(even) {
+    grid-template-columns: 1fr 110px;
+}
+
+.timeline > div:nth-child(even) > div {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.timeline > div:nth-child(even) > img {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+    /* =====================================================
+       TARGETES — MÒBIL
+       ===================================================== */
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cards div {
+        height: auto;
+        min-height: 320px;
+        padding: 35px 25px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .cards i {
+        flex-shrink: 0;
+    }
+
+    .cards h3 {
+        flex-shrink: 0;
+        margin: 20px 0 10px;
+    }
+
+    .cards div .cta {
+        flex-shrink: 0;
+        margin-top: 18px;
+    }
+
+
+    /* =====================================================
+       FOOTER — MÒBIL
+       ===================================================== */
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        text-align: center;
+    }
+
+    .footer span {
+        font-size: var(--size-footer);
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .footer img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+}
+
+
+/* =========================================================
+   TÍTOLS CENTRATS
+   ========================================================= */
+
+#nosaltres h2,
+#dia h2,
+#lloc h2,
+#info h2,
+#regal h2 {
+    width: 100%;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+/* =========================================================
+   18. OVERLAY MÒBIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .overlay {
+        padding: 10px;
+    }
+
+    .overlay-content {
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .overlay-photo {
+        max-height: 40vh;
+        object-fit: cover;
+    }
+
+    .overlay-content h2 {
+        font-size: var(--size-overlay-titol);
+    }
+
+    .overlay-content p {
+        font-size: var(--size-overlay-text);
+        line-height: 1.5;
+    }
+
+    .overlay-close {
+        width: 100%;
+        padding: 14px;
+        font-size: var(--size-overlay-boto);
+    }
+}
